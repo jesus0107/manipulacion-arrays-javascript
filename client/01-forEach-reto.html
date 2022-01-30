@@ -1,0 +1,42 @@
+<!-- Hacer una lista o array de tareas con titulo estado etc, y renderizar en un html, plus: agregar un input de tipo checkbox para indicar si esta completada o no. -->
+
+<!-- 1: Hacer nuestro array de tareas
+2: crear el html a manipular
+3: crear la logica para l manipulacion y renderizacion de las tareas -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="app"></main>
+    <!-- <input type="checkbox" name="state" id="" /> -->
+    <li>algo</li>
+    <script>
+      const tasksContainer = document.getElementById("app");
+
+      const tasks = [
+        { task: "Css grid bascio", state: true },
+        { task: "Frontend developer", state: true },
+        { task: "Economia figital", state: false },
+        { task: "Algoritmos en c", state: true },
+        { task: "Flexbox y grid", state: false },
+      ];
+
+      const newTasksContainer = [];
+
+      tasks.forEach((task) => {
+        tasksContainer.innerHTML += `
+          <li>${task.task}
+            <input type="checkbox" ${task.state ? "checked" : " "}>
+            </li>
+          
+        `;
+      });
+    </script>
+  </body>
+</html>
