@@ -17,6 +17,9 @@
     <!-- <input type="checkbox" name="state" id="" /> -->
     <li>algo</li>
     <script>
+      // Renderizar la lista de tareas mas un input de tipo checkbox el cual debe estar marcado en caso de haber terminado la tarea
+
+      // Si el estado de la tarea es true devlvemos la propiedad checked, la cual hara que se marque la casilla del checkbox, caso contrario quedara sin marcar.
       const tasksContainer = document.getElementById("app");
 
       const tasks = [
@@ -32,7 +35,7 @@
       tasks.forEach((task) => {
         tasksContainer.innerHTML += `
           <li>${task.task}
-            <input type="checkbox" ${task.state ? "checked" : " "}>
+            <input type="checkbox" ${task.state ? "checked" : " "}>/ 
             </li>
           
         `;

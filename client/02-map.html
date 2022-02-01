@@ -15,8 +15,6 @@
   <body>
     <main id="app"></main>
     <script>
-      // Renderizar en el html el array de productos en forma de una lista
-
       const appContainer = document.getElementById("app");
 
       const products = [
@@ -24,9 +22,11 @@
         { name: "Pizza", price: 18 },
       ];
 
-      products.forEach((product) => {
-        appContainer.innerHTML += `<li>${product.name} - ${product.price}</li>`;
+      const listOfProducts = products.map((product) => {
+        return `<li>${product.name} - ${product.price}</li>`;
       });
+      // console.log(listOfProducts);
+      appContainer.innerHTML = listOfProducts.join("");
     </script>
   </body>
 </html>
